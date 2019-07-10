@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Guru</title>
+	<link href="https://cdn.botframework.com/botframework-webchat/latest/botchat.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+    </style>
+</head>
+<body>
+	<div id='botDiv' style= "width: 50%; height: 97%; margin:5px; position: fixed; bottom: 0; right:25%; z-index: 1000;">
+		<div  id='botTitleBar' style= "height: 3%; width: 800px; position:fixed; cursor: pointer;">
+		</div>
+	</div>
+    <div id='botDiv' style= "width: 25%; height: 100%; margin:10px; top: 10%; position: fixed; bottom: 0; left:0%; z-index: 1000;">
+         <div class="container__row">
+                        <div class="resource">
+                            <img class="resource__logo" src="img/C3-round.png">
+                            <h3 class="resource__heading">
+                                <a target="_blank" class="resource__link" href="https://developer.mozilla.org/en-US/docs/Web/Events">JavaScript Event Reference</a>
+                            </h3>
+                            <p class="resource__text">Handy reference list of all DOM events with explanations, nicely categorized.</p>
+                        </div>
+                        <div class="resource">
+                            <img class="resource__logo" src="img/js-patterns.png">
+                            <h3 class="resource__heading">
+                                <a target="_blank" class="resource__link" href="http://youmightnotneedjquery.com/">DOM Manipulation Reference</a>
+                            </h3>
+                            <p class="resource__text">Called "You Might Not Need jQuery", but I use this as a complete DOM manipulation reference.</p>
+                        </div>
+                        <div class="resource">
+                            <img class="resource__logo" src="img/mdn.png">
+                            <h3 class="resource__heading">
+                                <a target="_blank" class="resource__link" href="http://keycodes.atjayjo.com/">JavaScript KeyCodes Reference</a>
+                            </h3>
+                            <p class="resource__text">Get keyboard codes, unicodes and keycodes. Vital reference for keypress event handling.</p>
+                        </div>
+         </div>
+    </div>
+	<div id='botDiv' style= "width: 25%; height: 100%; margin:10px; top: 10%; position: fixed; bottom: 0; right:0%; z-index: 1000;">
+         <div class="container__row">
+                        <div class="resource_right">
+                            <img class="resource__logo_right" src="img/C3-round.png">
+                            <h3 class="resource__heading_right">
+                                <a target="_blank" class="resource__link_right" href="https://developer.mozilla.org/en-US/docs/Web/Events">JavaScript Event Reference</a>
+                            </h3>
+                            <p class="resource__text_right">Handy reference list of all DOM events with explanations, nicely categorized.</p>
+                        </div>
+                        <div class="resource_right">
+                            <img class="resource__logo_right" src="img/js-patterns.png">
+                            <h3 class="resource__heading_right">
+                                <a target="_blank" class="resource__link_right" href="http://youmightnotneedjquery.com/">DOM Manipulation Reference</a>
+                            </h3>
+                            <p class="resource__text_right">Called "You Might Not Need jQuery", but I use this as a complete DOM manipulation reference.</p>
+                        </div>
+                        <div class="resource_right">
+                            <img class="resource__logo_right" src="img/mdn.png">
+                            <h3 class="resource__heading_right">
+                                <a target="_blank" class="resource__link_right" href="http://keycodes.atjayjo.com/">JavaScript KeyCodes Reference</a>
+                            </h3>
+                            <p class="resource__text_right">Get keyboard codes, unicodes and keycodes. Vital reference for keypress event handling.</p>
+                        </div>
+         </div>
+    </div>
+	<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+    <script>
+        var user = {
+            id: 'gpujar',
+            name: 'Giriyappa'
+        };
+        var botConnection = new BotChat.DirectLine({
+            token: 's17RkuxzmbI.tQmPZGyHFf8zL4Psn3jTDloKtWdmou7TmiUbIL-i3qQ',
+            user: user
+        });
+        BotChat.App({
+            user: user,
+            botConnection: botConnection,
+            bot: { id: '5d4a09eb-a333-4767-be00-94f9ff5d2311', name: 'JS Guru' },
+            resize: 'detect'
+        }, document.getElementById("botDiv"));
+        botConnection
+            .postActivity({
+                from: user,
+                name: 'ConversationUpdate',
+                type: 'event',
+                value: 'Hi'
+            })
+            .subscribe(function (id) {
+                console.log('"trigger requestWelcomeDialog" sent');
+            });
+    </script>
+</body>
+</html>

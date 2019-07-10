@@ -1,0 +1,34 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "type": "AdaptiveCard",
+        "body": [
+        {
+            "type": "TextBlock",
+            "text": "Definition:",
+            "weight": "bolder",
+            "size": "large"
+        },
+        {
+              "type": "Image",
+              "url": "https://i.postimg.cc/mkMg2pmr/definition.png",
+              "size": "stretch"
+        },
+        {
+            "type": "TextBlock",
+            "text": "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.",
+            "wrap": true,
+            "size": "large"
+        }
+        ],
+        "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://github3.cisco.com/IH/ctap/blob/master/README.md"
+            }
+        ]
+    }
+}

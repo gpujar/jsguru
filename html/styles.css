@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 300;
+  color: #38464d;
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.container__row {
+  margin-bottom: 4rem;
+}
+
+.container__row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.resource {
+  width: 100%;
+  float: left;
+  margin: 5% 10% 10% 5%;
+}
+
+.resource_right {
+  width: 100%;
+  float: right;
+  margin: 5% 10% 10% 5%;
+}
+
+.resource__logo {
+  display: block;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.resource__heading {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.resource__text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  width: 60%;
+}
+
+.resource__link:link,
+.resource__link:visited {
+  color: #26afeb;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.resource__link:hover,
+.resource__link:active {
+  color: #ff951f;
+}
+
+.resource__logo_right {
+  display: block;
+  height: 4rem;
+  float:right;
+  margin-bottom: 2rem;
+}
+
+.resource__heading_right {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  float:right;
+  width: 100%;
+  text-align: right;
+}
+
+.resource__text_right {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  float:right;
+  width: 60%;
+  text-align: right;
+}
+
+.resource__link_right:link,
+.resource__link_right:visited {
+  color: #26afeb;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.resource__link_right:hover,
+.resource__link_right:active {
+  color: #ff951f;
+}
+
+.resource__logo--round {
+  border-radius: 50%;
+}
+
+.resource__heading--premium::after,
+.resource__heading--new::after {
+  font-size: 8px;
+  display: inline-block;
+  color: #f9fafa;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-left: 1.5rem;
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+}
+
+.resource__heading--premium::after {
+  content: "PREMIUM";
+  background-color: #ff951f;
+}
+
+.resource__heading--new::after {
+  content: "NEW";
+  background-color: #ec3853;
+}

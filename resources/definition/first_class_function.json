@@ -7,18 +7,18 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "Definition:",
+            "text": "First Class Function:",
             "weight": "bolder",
             "size": "large"
         },
         {
               "type": "Image",
-              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+              "url": "https://i.postimg.cc/26DCxM0x/first-class.png",
               "size": "stretch"
         },
         {
             "type": "TextBlock",
-            "text": "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.",
+            "text": "A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.",
             "wrap": true,
             "size": "large"
         }
@@ -28,16 +28,6 @@
               "type": "Action.OpenUrl",
               "title": "More Info",
               "url": "https://github3.cisco.com/IH/ctap/blob/master/README.md"
-            },
-            {
-              "type": "Action.Submit",
-              "title": "Im Back",
-              "data": "im back"
-            },
-            {
-              "type": "Action.Submit",
-              "title": "Post Back",
-              "data": "postBack"
             }
         ]
     }

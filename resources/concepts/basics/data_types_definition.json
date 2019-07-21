@@ -7,18 +7,18 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "Object Based:",
+            "text": "Definition:",
             "weight": "bolder",
             "size": "large"
         },
         {
               "type": "Image",
-              "url": "https://i.postimg.cc/J4fX5sGk/object-based.png",
+              "url": "https://i.postimg.cc/fT8V9shx/definition-4.png",
               "size": "stretch"
         },
         {
             "type": "TextBlock",
-            "text": "object-based language may be used to describe any programming language that is based on the idea of encapsulating state and operations inside objects. Object-based languages need not support inheritance or polymorphism",
+            "text": "A variable stores data. Every variable has name, called its identifier. Variables declared using var, let and const, a keyword indicates to the interpreter that a new identifier is in use and allocates the storage space for new data.",
             "wrap": true,
             "size": "large"
         }
@@ -27,7 +27,7 @@
             {
               "type": "Action.OpenUrl",
               "title": "More Info",
-              "url": "https://github3.cisco.com/IH/ctap/blob/master/README.md"
+              "url": "https://www.geeksforgeeks.org/variables-datatypes-javascript/"
             }
         ]
     }

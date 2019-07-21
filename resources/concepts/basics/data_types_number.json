@@ -7,18 +7,18 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "Object Based:",
+            "text": "Number:",
             "weight": "bolder",
             "size": "large"
         },
         {
               "type": "Image",
-              "url": "https://i.postimg.cc/J4fX5sGk/object-based.png",
+              "url": "https://i.postimg.cc/26DCxM0x/first-class.png",
               "size": "stretch"
         },
         {
             "type": "TextBlock",
-            "text": "object-based language may be used to describe any programming language that is based on the idea of encapsulating state and operations inside objects. Object-based languages need not support inheritance or polymorphism",
+            "text": "A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.",
             "wrap": true,
             "size": "large"
         }
@@ -27,7 +27,7 @@
             {
               "type": "Action.OpenUrl",
               "title": "More Info",
-              "url": "https://github3.cisco.com/IH/ctap/blob/master/README.md"
+              "url": "https://www.geeksforgeeks.org/variables-datatypes-javascript/"
             }
         ]
     }

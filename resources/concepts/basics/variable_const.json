@@ -7,18 +7,18 @@
         "body": [
         {
             "type": "TextBlock",
-            "text": "Object Based:",
+            "text": "const:",
             "weight": "bolder",
             "size": "large"
         },
         {
               "type": "Image",
-              "url": "https://i.postimg.cc/J4fX5sGk/object-based.png",
+              "url": "https://i.postimg.cc/tJ9pDBxK/high-level.png",
               "size": "stretch"
         },
         {
             "type": "TextBlock",
-            "text": "object-based language may be used to describe any programming language that is based on the idea of encapsulating state and operations inside objects. Object-based languages need not support inheritance or polymorphism",
+            "text": "A high-level language is any programming language that enables development of a program in a much more user-friendly programming context and is generally independent of the computers hardware architecture.",
             "wrap": true,
             "size": "large"
         }
@@ -27,7 +27,7 @@
             {
               "type": "Action.OpenUrl",
               "title": "More Info",
-              "url": "https://github3.cisco.com/IH/ctap/blob/master/README.md"
+              "url": "https://www.geeksforgeeks.org/variables-datatypes-javascript/"
             }
         ]
     }

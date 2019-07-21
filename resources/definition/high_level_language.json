@@ -13,12 +13,12 @@
         },
         {
               "type": "Image",
-              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+              "url": "https://i.postimg.cc/tJ9pDBxK/high-level.png",
               "size": "stretch"
         },
         {
             "type": "TextBlock",
-            "text": "A high-level language is any programming language that enables development of a program in a much more user-friendly programming context and is generally independent of the computer's hardware architecture.",
+            "text": "A high-level language is any programming language that enables development of a program in a much more user-friendly programming context and is generally independent of the computers hardware architecture.",
             "wrap": true,
             "size": "large"
         }

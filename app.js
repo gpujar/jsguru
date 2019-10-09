@@ -28,15 +28,15 @@ const REST_PORT = (process.env.PORT || 5000);
 // const botConfig = new WebBotConfig(
 //     process.env.APIAI_ACCESS_TOKEN,
 //     process.env.APIAI_LANG,
-//     process.env.APP_ID,
-//     process.env.APP_SECRET
+//     process.env.APP_ID, //microsoft app id from settings
+//     process.env.APP_SECRET // Certificates & secrets from manage
 // );
 
 const botConfig = new WebBotConfig(
     "a2c925efb5f44da28d127b494794c133",
     "en",
-    "5d4a09eb-a333-4767-be00-94f9ff5d2311",
-    "sguVQ17}[#edsfFTTYP480+"
+    "7042563e-db5b-4fad-b543-4a7f0dd95c0e",
+    "iO:4mNCi8d-Cl6RIv0bipXypCrkie=@9"
 );
 
 const directChannelBot = new DirectChannelBot(botConfig);

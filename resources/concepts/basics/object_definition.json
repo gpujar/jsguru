@@ -1,0 +1,34 @@
+{
+    "contentType": "application/vnd.microsoft.card.adaptive",
+    "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "type": "AdaptiveCard",
+        "body": [
+        {
+            "type": "TextBlock",
+            "text": "Definition:",
+            "weight": "bolder",
+            "size": "large"
+        },
+        {
+              "type": "Image",
+              "url": "https://i.postimg.cc/fT8V9shx/definition-4.png",
+              "size": "stretch"
+        },
+        {
+            "type": "TextBlock",
+            "text": "A variable stores data. Every variable has name, called its identifier. Variables declared using var, let and const, a keyword indicates to the interpreter that a new identifier is in use and allocates the storage space for new data.",
+            "wrap": true,
+            "size": "large"
+        }
+        ],
+        "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "More Info",
+              "url": "https://www.geeksforgeeks.org/variables-datatypes-javascript/"
+            }
+        ]
+    }
+}

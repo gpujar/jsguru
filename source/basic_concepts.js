@@ -50,14 +50,21 @@ module.exports = class BasicConcepts{
             }
             break;
             case "basic_objects":{
-                let definition = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_definition.json'));
-                let number = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_number.json'));
-                let string = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_string.json'));
-                let boolean = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_boolean.json'));
-                let data_type_null = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_null.json'));
-                let data_types_undefined = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_undefined.json'));
-                let object = JSON.parse(fs.readFileSync('./resources/concepts/basics/data_types_object.json'));
-                session.send(new botbuilder.Message(session).attachments([definition, number, string, boolean, data_type_null, data_types_undefined, object]).attachmentLayout(botbuilder.AttachmentLayout.carousel));
+                let definition = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_definition.json'));
+                let userdefined_creation = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_userdefined_creation.json'));
+                let userdefined_destraction = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_userdefined_destruction.json'));
+                let buildin = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_buildin.json'));
+                session.send(new botbuilder.Message(session).attachments([definition, userdefined_creation, userdefined_destraction, buildin]).attachmentLayout(botbuilder.AttachmentLayout.carousel));
+                //response_message = util.getHeroCardResponseText(session, definitionHeroCard.WELCOME.title, definitionHeroCard.WELCOME.subtitle, definitionHeroCard.WELCOME.imageUrl, definitionHeroCard.WELCOME.buttons);
+                //session.send(response_message);
+            }
+            break;
+            case "basic_buildin_objects":{
+                let definition = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_definition.json'));
+                let userdefined_creation = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_userdefined_creation.json'));
+                let userdefined_destraction = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_userdefined_destruction.json'));
+                let buildin = JSON.parse(fs.readFileSync('./resources/concepts/basics/object_buildin.json'));
+                session.send(new botbuilder.Message(session).attachments([definition, userdefined_creation, userdefined_destraction, buildin]).attachmentLayout(botbuilder.AttachmentLayout.carousel));
                 //response_message = util.getHeroCardResponseText(session, definitionHeroCard.WELCOME.title, definitionHeroCard.WELCOME.subtitle, definitionHeroCard.WELCOME.imageUrl, definitionHeroCard.WELCOME.buttons);
                 //session.send(response_message);
             }

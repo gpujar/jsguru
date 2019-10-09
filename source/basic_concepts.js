@@ -15,6 +15,17 @@ module.exports = class BasicConcepts{
     sendMessage(session, message, intentAction, intentParameters){
         let response_message;
         switch (intentAction) {
+            case "basic_concepts":{
+                let definition = JSON.parse(fs.readFileSync('./resources/definition/definition_1.json'));
+                let high_level_language = JSON.parse(fs.readFileSync('./resources/definition/high_level_language.json'));
+                let interpreted_programe = JSON.parse(fs.readFileSync('./resources/definition/interpreted_language.json'));
+                let curly_bracket_syntax = JSON.parse(fs.readFileSync('./resources/definition/curly_bracket_syntax.json'));
+                let dynamic_typing = JSON.parse(fs.readFileSync('./resources/definition/dynamic_typing.json'));
+                let object_oriented = JSON.parse(fs.readFileSync('./resources/definition/object_orientation.json'));
+                let first_class_function = JSON.parse(fs.readFileSync('./resources/definition/first_class_function.json'));
+                session.send(new botbuilder.Message(session).attachments([definition, dynamic_typing, first_class_function, interpreted_programe, object_oriented, curly_bracket_syntax, high_level_language]).attachmentLayout(botbuilder.AttachmentLayout.carousel));
+            }
+            break;
             case "basic_definition":{
                 let definition = JSON.parse(fs.readFileSync('./resources/definition/definition_1.json'));
                 let high_level_language = JSON.parse(fs.readFileSync('./resources/definition/high_level_language.json'));

@@ -112,7 +112,8 @@ module.exports = class SkypeBot {
                 session.sendTyping();
                 this.processMessage(session);
             }else if(session){
-                console.log('CTAP Guru :: welcome message display ');
+                // Auto replay for first time hitting URL. Displays welcome Hero card with scope of bot.
+                console.log('CTAP Guru :: welcome message display..... ');
                 let title = definitionHeroCard.WELCOME.title;
                 let subtitle = definitionHeroCard.WELCOME.subtitle;
                 let imageUrl = definitionHeroCard.WELCOME.imageUrl;
@@ -169,7 +170,15 @@ module.exports = class SkypeBot {
         this._bot.send(msg);
         this._bot.beginDialog(address, '/');
     }
-
+    /**
+     * 1. Reads user text from session.
+     * 2. Request DialogFlow(API.AI) with user input for NLP.
+     * 3. Reads intentAction, intentParameter, responseText and responseMessage from DialogFlow.
+     * 4. Based on tententAction, gets relevant cards (mostly adaptive cards).
+     * 5. Sends response back to bot.
+     * 
+     * @param {*} session 
+     */
     processMessage(session) {
         let messageText = session.message.text;
         let sender = session.message.address.conversation.id;
@@ -178,6 +187,7 @@ module.exports = class SkypeBot {
             if (!this._sessionIds.has(sender)) {
                 this._sessionIds.set(sender, uuid.v1());
             }
+            // Dialogflow request for NLP.
             let apiaiRequest = this._apiaiService.textRequest(messageText,
                 {
                     sessionId: this._sessionIds.get(sender),
@@ -186,6 +196,7 @@ module.exports = class SkypeBot {
                         source: "skype"
                     }
                 });
+            // Response from Dialogflow.
             apiaiRequest.on('response', (response) => {
                 console.log('JS Bot :: Api.ai response  ', JSON.stringify(response));
                 if (this._botConfig.devConfig) {
@@ -203,26 +214,50 @@ module.exports = class SkypeBot {
                     console.log('JS Bot :: responseMessages '+JSON.stringify(responseMessages));
 
                     if (Utils.isDefined(responseMessages) && responseMessages.length > 0) {
+                        // Sends cards based on intentAction.
                         this.getMessage(session, responseMessages, intentAction, intentParameters);
                     } else if (Utils.isDefined(responseText)) {
+                        // Send dialogflow response text if intentAction is not received from dialogflow.
                         console.log(sender, 'Response as text message');
                         session.send(responseText);
                     } else {
+                        // No response if intentAction and responseText not received from dialogFlow.
                         console.log(sender, 'Received empty speech');
                     }
                 } else {
                     console.log(sender, 'Received empty result');
                 }
             });
+            // Dialogflow request failed case.
             apiaiRequest.on('error', (error) => {
-                console.error(sender, 'Error while call to api.ai', error);
+                console.error(sender, 'Error while call to api.ai/dialogflow ', error);
             });
             apiaiRequest.end();
         } else {
-            console.log('Empty message');
+            // Empty response from Bot
+            console.log('Empty message received from bot.');
         }
     }
 
+    /**
+     * Based on intent category, delegates call to respective category file to send message/response.
+     * There are 10 intent categories now. These are categorised based on content of JS.
+     * 1. Basic Concepts - JS basic concepts are covered.
+     * 2. Advance Concepts - JS advanced/important and latest upcoming concepts are covered.
+     * 3. Difference - JS concepts difference Ex. let and const etc.
+     * 4. Algorithems and Data Structure
+     * 5. Design Patterns
+     * 6. Libraries and Tools
+     * 7. Debugging
+     * 8. Unit Tests
+     * 9. Errors
+     * 10. Others
+     * 
+     * @param {*} session - Session object received from Bot 
+     * @param {*} message - Response message received from dialogflow, not using now
+     * @param {*} intentAction - Intent action received from dialogflows, decides response to user.
+     * @param {*} intentParameters - Intent parameters received from dialogflow, not using now.
+     */
     getMessage(session, message, intentAction, intentParameters) {
         if(intentAction.indexOf('basic_') !== -1){
             basicConcepts.sendMessage(session, message, intentAction, intentParameters);

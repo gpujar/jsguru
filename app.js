@@ -28,14 +28,18 @@ const REST_PORT = (process.env.PORT || 5000);
 // const botConfig = new WebBotConfig(
 //     process.env.APIAI_ACCESS_TOKEN,
 //     process.env.APIAI_LANG,
-//     process.env.APP_ID, //microsoft app id from settings
-//     process.env.APP_SECRET // Certificates & secrets from manage
+//     process.env.APP_ID,
+//     process.env.APP_SECRET
 // );
 
 const botConfig = new WebBotConfig(
+    // Dialogflow access token, used to communicate with dialogflow.
     "a2c925efb5f44da28d127b494794c133",
+    // Dialogflow language type.
     "en",
+    // Microsoft Azure Web bot application id.
     "7042563e-db5b-4fad-b543-4a7f0dd95c0e",
+    // Microsoft Azure secrete id of web bot.
     "iO:4mNCi8d-Cl6RIv0bipXypCrkie=@9"
 );
 
@@ -46,11 +50,15 @@ require('console-stamp')(console, 'yyyy.mm.dd HH:MM:ss.l');
 
 const app = express();
 app.use(bodyParser.json());
-
+// Request from Azure to process request which is received from bot.
 app.post('/chat', directChannelBot.botService.listen());
+
+// Added for testing server using API/postman
 app.get('/chat', function(){
      console.log('JS Guru Bot Test API ..... ');
 });
+
+// Server up notification.
 app.listen(REST_PORT, function () {
     console.log('JS Guru Bot Rest service ready on port ' + REST_PORT);
     return;

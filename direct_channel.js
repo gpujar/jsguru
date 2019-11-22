@@ -24,10 +24,10 @@ const  Utils = require('./utils');
 const util = new Utils();
 const BasicConcepts = require('./source/basic_concepts');
 const basicConcepts = new BasicConcepts();
-const AlgorithmsDatastructure = require('./source/algorithm_dataStructure');
-const algorithmsDatastructure = new AlgorithmsDatastructure();
 const CoreConcepts = require('./source/core_concepts');
 const coreConcepts = new CoreConcepts();
+const AlgorithmsDatastructure = require('./source/algorithm_dataStructure');
+const algorithmsDatastructure = new AlgorithmsDatastructure();
 const DesignPatterns = require('./source/design_patterns');
 const designPatterns = new DesignPatterns();
 const LibraryTools = require('./source/library_tools');
@@ -46,6 +46,16 @@ var definition = JSON.parse(definition1);
 
 var definitionHeroCard1 = fs.readFileSync('./resources/definition/definition_hero_card.json');
 var definitionHeroCard = JSON.parse(definitionHeroCard1);
+
+// Category and that's object mapping.
+var categoryMapper = {
+    basic : basicConcepts,
+    advance : coreConcepts,
+    algorithms : algorithmsDatastructure,
+    designPattern : designPatterns,
+    libraryTools : libraryTools,
+    others : others,
+}
 
 module.exports = class SkypeBot {
 
@@ -161,8 +171,14 @@ module.exports = class SkypeBot {
                this._bot.beginDialog(session.address, '/');
             }
         });
+        
     }
 
+    /**
+     * Sends proactive messages to active users.
+     * 
+     * @param {*} address - Address/session info of users.
+     */
     sendProactiveMessage(address) {
         var msg = new botbuilder.Message().address(address);
         msg.text('Welcome to JS Guru');
@@ -170,6 +186,7 @@ module.exports = class SkypeBot {
         this._bot.send(msg);
         this._bot.beginDialog(address, '/');
     }
+
     /**
      * 1. Reads user text from session.
      * 2. Request DialogFlow(API.AI) with user input for NLP.
@@ -245,7 +262,7 @@ module.exports = class SkypeBot {
      * 1. Basic Concepts - JS basic concepts are covered.
      * 2. Advance Concepts - JS advanced/important and latest upcoming concepts are covered.
      * 3. Difference - JS concepts difference Ex. let and const etc.
-     * 4. Algorithems and Data Structure
+     * 4. Algorithms and Data Structure
      * 5. Design Patterns
      * 6. Libraries and Tools
      * 7. Debugging
@@ -254,38 +271,33 @@ module.exports = class SkypeBot {
      * 10. Others
      * 
      * @param {*} session - Session object received from Bot 
-     * @param {*} message - Response message received from dialogflow, not using now
+     * @param {*} message - Response message received from dialogflow, not using now.
      * @param {*} intentAction - Intent action received from dialogflows, decides response to user.
      * @param {*} intentParameters - Intent parameters received from dialogflow, not using now.
      */
     getMessage(session, message, intentAction, intentParameters) {
-        if(intentAction.indexOf('basic_') !== -1){
-            basicConcepts.sendMessage(session, message, intentAction, intentParameters);
-        }else if(intentAction.indexOf('core_') !== -1){
-            coreConcepts.sendMessage(session, message, intentAction, intentParameters);
-        }else if(intentAction.indexOf('design_') !== -1){
-            designPatterns.sendMessage(session, message, intentAction, intentParameters);
-        }else if(intentAction.indexOf('algo_ds_') !== -1){
-            algorithmsDatastructure.sendMessage(session, message, intentAction, intentParameters);
-        }else if(intentAction.indexOf('lib_tool_') !== -1){
-            libraryTools.sendMessage(session, message, intentAction, intentParameters);
-        }else if(intentAction.indexOf('others_') !== -1){
-            others.sendMessage(session, message, intentAction, intentParameters);
+        let category = intentAction.split('_')[0];
+        console.log('JS Bot :: getMessage category ',category);
+        // Gets category object from mapper object, using action type. Ex basic_.... = basic_concepts.js
+        // For any new category, shall be added in categoryMapper object.
+        let object = categoryMapper[category];
+        if(object){
+            object.sendMessage(session, message, intentAction, intentParameters);
         }else{
-             for (let messageIndex = 0; messageIndex < message.length; messageIndex++) {
-                    let msg = message[messageIndex];
-                    switch (msg.type) {
-                        //message.type 0 means text message
-                        case 0:
-                        {
-                            if (Utils.isDefined(msg.speech)) {
-                                session.send(msg.speech);
-                            }
-                        }
-                        break;
-                    }
-                }
-        }
+            for (let messageIndex = 0; messageIndex < message.length; messageIndex++) {
+                   let msg = message[messageIndex];
+                   switch (msg.type) {
+                       //message.type 0 means text message
+                       case 0:
+                       {
+                           if (Utils.isDefined(msg.speech)) {
+                               session.send(msg.speech);
+                           }
+                       }
+                       break;
+                   }
+               }
+       }
     }
     
 }

@@ -8,11 +8,22 @@
     </style>
 </head>
 <body>
-	<div id='botDiv' style= "width: 50%; height: 97%; margin:5px; position: fixed; bottom: 0; right:25%; z-index: 1000;">
+	<div id='botDiv' style= "width: 50%; height: 97%; margin:5px; position: fixed; bottom: 0; left:25%; right:25%; z-index: 1000;">
 		<div  id='botTitleBar' style= "height: 3%; width: 800px; position:fixed; cursor: pointer;">
 		</div>
 	</div>
-    <div id='botDiv' style= "width: 25%; height: 100%; margin:10px; top: 10%; position: fixed; bottom: 0; left:0%; z-index: 1000;">
+    <div id='instructionDiv' style= "width: 25%; height: 100%; top: 10%; position: fixed; bottom: 0; left:75%; right:0%; z-index: 1000;">
+        <h1 style = "font-size: 2.5rem; display: inline-block; color: #00b8e6; padding: 0.3rem 0.6rem; border-radius: 0.3rem; margin-left: 1.5rem;">
+            3 ways to interact with JSGuru.
+        </h1>    
+        <pre class="resource__text" style = "font-size: 1.8rem; display: inline-block; color: #38464d; padding: 0.3rem 0.6rem; border-radius: 0.3rem; margin-left: 1.5rem;">
+1. Natural Language Ex. What is Javascript?,
+                        What is object etc.
+2. Commands Ex. define, object
+3. By selecting label.
+        </pre>
+    </div>
+    <div id='resourceDiv' style= "width: 25%; height: 100%; margin:10px; top: 10%; position: fixed; bottom: 0; left:0%; z-index: 1000;">
          <div class="container__row">
                         <div class="resource">
                             <img class="resource__logo" src="img/mdn.png">
@@ -35,40 +46,6 @@
                             </h3>
                             <p class="resource__text">Github link to algorithms and data structures.</p>
                         </div>
-         </div>
-    </div>
-	<div id='botDiv' style= "width: 25%; height: 100%; margin:10px; top: 10%; position: fixed; bottom: 0; right:0%; z-index: 1000;">
-         <div class="container__row">
-                     <!-- <div class="resource_right">
-                            <img class="resource__logo_right" src="img/C3-round.png">
-                            <h3 class="resource__heading_right">
-                                <a target="_blank" class="resource__link_right" href="https://developer.mozilla.org/en-US/docs/Web/Events">JavaScript Event Reference</a>
-                            </h3>
-                            <p class="resource__text_right">Handy reference list of all DOM events with explanations, nicely categorized.</p>
-                        </div>
-                        <div class="resource_right">
-                            <img class="resource__logo_right" src="img/js-patterns.png">
-                            <h3 class="resource__heading_right">
-                                <a target="_blank" class="resource__link_right" href="http://youmightnotneedjquery.com/">DOM Manipulation Reference</a>
-                            </h3>
-                            <p class="resource__text_right">Called "You Might Not Need jQuery", but I use this as a complete DOM manipulation reference.</p>
-                        </div>
-                        <div class="resource_right">
-                            <img class="resource__logo_right" src="img/mdn.png">
-                            <h3 class="resource__heading_right">
-                                <a target="_blank" class="resource__link_right" href="http://keycodes.atjayjo.com/">JavaScript KeyCodes Reference</a>
-                            </h3>
-                            <p class="resource__text_right">Get keyboard codes, unicodes and keycodes. Vital reference for keypress event handling.</p>
-                        </div> -->
-             <h1 class="help__heading">
-                 3 ways to interact with JSGuru.
-             </h1>
-             <pre class="help__text">
-1. Natural Language Ex. What is Javascript?,
-                        What is object etc.
-2. Commands Ex. define, object
-3. By selecting label.
-             </pre>
          </div>
     </div>
 	<script src="https://cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>

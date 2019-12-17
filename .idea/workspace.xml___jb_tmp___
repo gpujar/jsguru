@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa258e6f-b0d5-4e58-a80b-12c4bf41fa34" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/basic_concepts.js" afterPath="$PROJECT_DIR$/source/basic_concepts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/basic_concepts.js" afterPath="$PROJECT_DIR$/source/basic_concepts.js" />
     </list>
     <ignored path="hackathon_2019.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -547,7 +547,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="860" extended-state="1" />
+    <frame x="0" y="0" width="1600" height="860" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21363637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

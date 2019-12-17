@@ -1,0 +1,38 @@
+{
+    "basic_concepts": {"description": "This is description of basic concept", "cards":[
+        "./source/sections/section1/resources/definition/definition_1.json", "./source/sections/section1/resources/definition/high_level_language.json",
+        "./source/sections/section1/resources/definition/interpreted_language.json", "./source/sections/section1/resources/definition/curly_bracket_syntax.json",
+        "./source/sections/section1/resources/definition/dynamic_typing.json", "./source/sections/section1/resources/definition/object_orientation.json",
+        "./source/sections/section1/resources/definition/first_class_function.json"
+    ]},
+    "basic_definition": {"description": "This is description of basic definition", "cards":[
+        "./source/sections/section1/resources/definition/definition_1.json", "./source/sections/section1/resources/definition/high_level_language.json",
+        "./source/sections/section1/resources/definition/interpreted_language.json", "./source/sections/section1/resources/definition/curly_bracket_syntax.json",
+        "./source/sections/section1/resources/definition/dynamic_typing.json", "./source/sections/section1/resources/definition/object_orientation.json",
+        "./source/sections/section1/resources/definition/first_class_function.json"
+    ]},
+    "basic_variables": {"description": "This is description of basic definition", "cards":[
+        "./source/sections/section1/resources/concepts/basics/variable_definition.json", "./source/sections/section1/resources/concepts/basics/variable_var.json",
+        "./source/sections/section1/resources/concepts/basics/variable_let.json", "./source/sections/section1/resources/concepts/basics/variable_const.json"
+    ]},
+    "basic_primitive_types": {"description": "This is description of basic definition", "cards":[
+        "./source/sections/section1/resources/concepts/basics/data_types_definition.json", "./source/sections/section1/resources/concepts/basics/data_types_number.json",
+        "./source/sections/section1/resources/concepts/basics/data_types_string.json", "./source/sections/section1/resources/concepts/basics/data_types_boolean.json",
+        "./source/sections/section1/resources/concepts/basics/data_types_null.json", "./source/sections/section1/resources/concepts/basics/data_types_undefined.json",
+        "./source/sections/section1/resources/concepts/basics/data_types_object.json"
+    ]},
+    "basic_objects": {"description": "This is description of basic definition", "cards":[
+        "./source/sections/section1/resources/concepts/basics/object_definition.json", "./source/sections/section1/resources/concepts/basics/object_userdefined_creation.json",
+        "./source/sections/section1/resources/concepts/basics/object_userdefined_destruction.json", "./source/sections/section1/resources/concepts/basics/object_buildin.json"
+    ]},
+    "basic_buildin_objects": {"description": "This is description of basic definition", "cards":[
+        "./source/sections/section1/resources/concepts/basics/object_definition.json", "./source/sections/section1/resources/concepts/basics/object_userdefined_creation.json",
+        "./source/sections/section1/resources/concepts/basics/object_userdefined_destruction.json", "./source/sections/section1/resources/concepts/basics/object_buildin.json"
+    ]},
+    "core_concepts": {"description": "This is example", "cards":[
+        "./source/sections/section1/resources/definition/definition_1.json", "./source/sections/section1/resources/definition/high_level_language.json",
+        "./source/sections/section1/resources/definition/interpreted_language.json", "./source/sections/section1/resources/definition/curly_bracket_syntax.json",
+        "./source/sections/section1/resources/definition/dynamic_typing.json", "./source/sections/section1/resources/definition/object_orientation.json",
+        "./source/sections/section1/resources/definition/first_class_function.json"
+    ]}
+}

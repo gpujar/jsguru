@@ -1,0 +1,157 @@
+{
+    "WELCOME": {
+        "title": "Welcome To JS Guru",
+        "description": "welcome message",
+        "imageUrl": "https://i.postimg.cc/Gmmc0896/js-guru-3.png",
+        "subtitle": "JS Guru provides information on js engine, core concepts and coding best practices.",
+        "size": "medium",
+        "buttons": [
+          {
+            "text": "Concepts",
+            "postback": "concepts"
+          },
+          {
+            "text": "Data Structures And Algorithms",
+            "postback": "ds_algorithms"
+          },
+          {
+            "text": "Performance And Best Practices",
+            "postback": "performance_practices"
+          },
+          {
+            "text": "Design Patterns",
+            "postback": "design_patterns"
+          },
+          {
+            "text": "Libraries And Frameworks",
+            "postback": "libraries_frameworks"
+          },
+          {
+            "text": "Engine And ECMA Scripts",
+            "postback": "engine_ecma"
+          }
+        ]
+    },
+    "DEFINITION": {
+        "high_level_language": {
+            "description": "Details of high level language.",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "High-level language: \n\n A high-level language is any programming language that enables development of a program in a much more user-friendly programming context and is generally independent of the computer's hardware architecture",
+            "subtitle": "A high-level language is any programming language that enables development of a program in a much more user-friendly programming context and is generally independent of the computer's hardware architecture",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        },
+        "interpreted_language": {
+            "description": "Package Hindi Smart",
+            "subtitle": "",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "Hindi Smart Pack 250 Rs",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        },
+        "curly_bracket_syntax": {
+            "description": "Package Hindi Smart",
+            "subtitle": "",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "Hindi Smart Pack 250 Rs",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        },
+        "dynamic_typing": {
+            "description": "Package Hindi Smart",
+            "subtitle": "",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "Hindi Smart Pack 250 Rs",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        },
+        "object_oriented": {
+            "description": "Package Hindi Smart",
+            "subtitle": "",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "Hindi Smart Pack 250 Rs",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        },
+        "first_class_function": {
+            "description": "Package Hindi Smart",
+            "subtitle": "",
+            "imageUrl": "https://i.postimg.cc/3JBd2Mw6/hindi-basic.jpg",
+            "title": "Hindi Smart Pack 250 Rs",
+            "buttons": [
+              {
+                "text": "Subscribe 250 Rs",
+                "postback": "subscribe"
+              },
+              {
+                "text": "Previous",
+                "postback": "package_hindi"
+              },
+              {
+                "text": "Home",
+                "postback": "welcome"
+              }
+            ]
+        }
+    }
+}

@@ -22,39 +22,38 @@ const botbuilder = require('botbuilder');
 const fs = require('fs');
 const  Utils = require('./utils');
 const util = new Utils();
-const BasicConcepts = require('./source/basic_concepts');
-const basicConcepts = new BasicConcepts();
-const CoreConcepts = require('./source/core_concepts');
-const coreConcepts = new CoreConcepts();
-const AlgorithmsDatastructure = require('./source/algorithm_dataStructure');
-const algorithmsDatastructure = new AlgorithmsDatastructure();
-const DesignPatterns = require('./source/design_patterns');
-const designPatterns = new DesignPatterns();
-const LibraryTools = require('./source/library_tools');
-const libraryTools = new LibraryTools();
-const Others = require('./source/others');
-const others = new Others();
-
+const Section1 = require('./source/sections/section1/section1_main');
+const section1 = new Section1();
+const Section2 = require('./source/sections/section2/section2_main');
+const section2 = new Section2();
+const Section3 = require('./source/sections/section3/section3_main');
+const section3 = new Section3();
+const Section4 = require('./source/sections/section4/section4_main');
+const section4 = new Section4();
+const Section5 = require('./source/sections/section5/section5_main');
+const section5 = new Section5();
+const Section6 = require('./source/sections/section6/section6_main');
+const section6 = new Section6();
 // Changes to use Azure DB
 //const azure = require('botbuilder-azure');
 
 var welcomeAdaptiveCard1 = fs.readFileSync('./resources/welcome/welcome_adaptive_card.json');
 const welcomeAdaptiveCard = JSON.parse(welcomeAdaptiveCard1);
 
-var definition1 = fs.readFileSync('./resources/definition/definition_1.json');
-var definition = JSON.parse(definition1);
+// var definition1 = fs.readFileSync('./resources/welcome/definition_1.json');
+// var definition = JSON.parse(definition1);
 
-var definitionHeroCard1 = fs.readFileSync('./resources/definition/definition_hero_card.json');
+var definitionHeroCard1 = fs.readFileSync('./resources/welcome/definition_hero_card.json');
 var definitionHeroCard = JSON.parse(definitionHeroCard1);
 
 // Category and that's object mapping.
 var categoryMapper = {
-    basic : basicConcepts,
-    advance : coreConcepts,
-    algorithms : algorithmsDatastructure,
-    designPattern : designPatterns,
-    libraryTools : libraryTools,
-    others : others,
+    basic : section1,
+    advance : section2,
+    algorithms : section3,
+    designPattern : section4,
+    libraryTools : section5,
+    others : section6,
 }
 
 module.exports = class SkypeBot {
